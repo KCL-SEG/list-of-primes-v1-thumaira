@@ -11,5 +11,3 @@ def primes(number_of_primes):
             else:
                 list.append(number)
     print(list)
-
-primes(10)
