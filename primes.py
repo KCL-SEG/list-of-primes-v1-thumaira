@@ -3,14 +3,14 @@
 
 def primes(number_of_primes):
     list = []
-    number=1
     i= 2
     while len(list)< number_of_primes:
+        prime = True
         number+=1
-        for i in range (1, number):
+        for i in range (2, number//2+1):
             if (number % i)==0:
+                prime = False
                 break
-            else:
-                list.append(number)
-        print(list)
-primes(20)
+        if prime:
+            list.append(number)
+        return list
